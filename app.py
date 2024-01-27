@@ -11,5 +11,5 @@ chat_id = '5575549228'
 @app.route('/', methods=['POST'])
 def index():
     print('index page')
-    # bot.send_message(chat_id=chat_id, text='Hello World!!!')
+    bot.send_message(chat_id=chat_id, text='Hello World!!!')
     return 'index page'
