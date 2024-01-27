@@ -8,7 +8,7 @@ bot = telegram.Bot(TOKEN)
 chat_id = '5575549228'
 
 # route for index page
-@app.route('/')
+@app.route('/', methods=['POST'])
 def index():
-    bot.send_message(chat_id=chat_id, text='Hello World!!!')
+    # bot.send_message(chat_id=chat_id, text='Hello World!!!')
     return 'index page'
