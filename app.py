@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 import telegram
 # Create the application instance
 app = Flask(__name__)
@@ -10,6 +10,7 @@ chat_id = '5575549228'
 # route for index page
 @app.route('/', methods=['POST'])
 def index():
-    print('index page')
+    data = request.get_json()
+    print(data)
     bot.send_message(chat_id=chat_id, text='Hello World!!!')
     return 'index page'
